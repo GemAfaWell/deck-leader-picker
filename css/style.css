@@ -1,0 +1,183 @@
+/******************************************
+/* MODERATELY BETTER CSS BUT STILL MID 
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+@font-face {
+  font-family: 'Yu-Gi-Oh!';
+  src: url('yu-gi-oh_itc_stone_serif_small_caps_bold-webfont.woff2') format('woff2'),
+       url('yu-gi-oh_itc_stone_serif_small_caps_bold-webfont.woff') format('woff');
+       url('yu-gi-oh_itc_stone_serif_small_caps_bold-webfont.ttf') format('truetype');
+}
+html {
+  overflow-x: hidden;
+  background: url('https://images1.wikia.nocookie.net/__cb20100611232908/yu-gi-ohfanon/images/8/8c/Millennium_Items.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.8);
+  background-blend-mode: lighten;
+}
+body {
+  overflow-x: hidden;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+h1, h2, h3, small{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Yu-Gi-Oh!', Helvetica, sans-serif;
+  color: silver;
+  text-shadow: 2px 2px 2px black;
+}
+img{
+  display: block;
+  margin: 0 auto;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  border: 10px solid gold;
+  box-shadow: 5px 5px 5px black;
+  margin: 0 auto;
+  list-style: none;
+  padding: 1em;
+  color: silver;
+  text-shadow: 2px 2px 2px black;
+  background-color: rgba(175,175,175,0.8);
+}
+.ygo {
+  width: 100%;
+  height: 100%;
+  perspective: 100%;
+  margin: 5%;
+}
+.ygoCont {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.img-fluid {
+  max-width: 100%;
+}
+.card {
+  border-radius: 2%;
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+// fade in animation for page
+.fadein {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadein {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes fadein {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadein {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+// flip animation for cards
+.deckLeaders {
+  width: 100%;
+  height: 100%;
+}
+.ygoCont {
+  transform-style: preserve-3d;
+  transform-origin: right center;
+  transition: transform 1.5s;
+}
+.ygoCont.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.front {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+}
+.back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+// for mobile
+@media all and (max-width: 767px) {
+  ul {
+    flex-direction: column;
+  }
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+}
