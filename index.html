@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="This app helps youtubers pick the best background color for their videos">
+	<meta name="keywords" content="youtube, background, lights">
+	<meta name="author" content="Gemini Powell">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Yu-Gi-Oh! Deck Leader Picker</title>
+
+	<!-- external CSS links -->
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<!-- Logo -->
+	<audio id="duelAudio" src="https://dl.sndup.net/4n8z/Yu-Gi-Oh!%20Duel%20Monsters%20Season%202%20Opening%20Theme.mp3"
+		preload="auto"></audio>
+	<img class="img-fluid"
+		src="https://vignette4.wikia.nocookie.net/fictional-battle-omniverse/images/6/6f/Official_Yu-Gi-Oh!_Logo.png/revision/latest?cb=20151029161850"
+		alt="Yu-Gi-Oh! logo" id="logo">
+	<small>click the logo for your duel soundtrack!</small>
+
+	<!-- Message for Duelists -->
+	<h1>It's Time to Duel!</h1>
+	<h2>Choose your deck leader... Seto Kaiba is waiting...</h2>
+	<h3>It's your move!</h3>
+
+	<!-- Card Picker -->
+	<ul class="deckLeaders">
+
+		<!-- Blue-Eyes White Dragon -->
+		<li class="ygo">
+			<div class="ygoCont blue">
+				<div class="front">
+					<img class="img-fluid card"
+						src="http://images.wikia.com/yugioh/images/archive/e/e5/20100726082131!Back-EN.png"
+						alt="Back of Yu-Gi-Oh! Trading Card. Copyright 1996 Kazuki Takahashi.">
+				</div>
+				<div class="back">
+					<audio id="bewd" src="https://dl.sndup.net/3jcj/bewdroar.mp3"></audio>
+					<img class="img-fluid card"
+						src="https://ms.yugipedia.com/7/77/BlueEyesWhiteDragon-LCKC-EN-UR-1E.png"
+						alt="Blue-Eyes White Dragon card. Type: Dragon/Normal. Description: This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale. Attack points, 3000. Defense points, 2500. Card password: 89631139. First edition. Copyright 1996 Kazuki Takahashi.">
+				</div>
+			</div>
+		</li>
+
+		<!-- Dark Magician -->
+		<li class="ygo">
+			<div class="ygoCont" id="purple">
+				<div class="front">
+					<img class="img-fluid card"
+						src="http://images.wikia.com/yugioh/images/archive/e/e5/20100726082131!Back-EN.png"
+						alt="Back of Yu-Gi-Oh! Trading Card. Copyright 1996 Kazuki Takahashi.">
+				</div>
+				<div class="back">
+					<audio id="dm" src="https://dl.sndup.net/n4rm/dmsounds.mp3" preload="auto"></audio>
+					<img class="img-fluid card" src="https://usercontent1.hubstatic.com/13971918_f1024.jpg"
+						alt="Red-Eyes Black Dragon card. Type: Dragon/Normal. Description: A ferocious dragon with a deadly attack. Attack points, 2400. Defense points, 2000. Card password: 74677422. First edition. Copyright 2020 Studio Dice/SHUEISHA, TV TOKYO, KONAMI">
+				</div>
+			</div>
+		</li>
+
+		<!-- Red-Eyes Black Dragon -->
+		<li class="ygo">
+			<div class="ygoCont" id="red">
+				<div class="front">
+					<img class="img-fluid card"
+						src="http://images.wikia.com/yugioh/images/archive/e/e5/20100726082131!Back-EN.png"
+						alt="Back of Yu-Gi-Oh! Trading Card. Copyright 1996 Kazuki Takahashi.">
+				</div>
+				<div class="back">
+					<audio id="rebd" src="https://dl.sndup.net/bg6y/rebdroar.mp3" preload="auto"></audio>
+					<img class="img-fluid card"
+						src="https://ms.yugipedia.com/6/6c/RedEyesBlackDragon-MAGO-EN-PGR-1E.png"
+						alt="Red-Eyes Black Dragon card. Type: Dragon/Normal. Description: A ferocious dragon with a deadly attack. Attack points, 2400. Defense points, 2000. Card password: 74677422. First edition. Copyright 2020 Studio Dice/SHUEISHA, TV TOKYO, KONAMI">
+				</div>
+			</div>
+		</li>
+	</ul>
+
+	<!-- Script -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
